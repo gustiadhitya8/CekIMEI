@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Cek IMEI</string>
+    <string name="app_ver">1.0.1</string>
+    <string name="url_api_check_imei">https://api-myretail.indosatooredoo.com/api/imei/check</string>
+    <string name="url_token_myretail">https://api-myretail.indosatooredoo.com/oauth/token</string>
+    <string name="url_loginl">https://champions.iodigitrack.com/CheckIMEI/Prod/Login/</string>
+    <string name="url_check_imei_log">https://champions.iodigitrack.com/CheckIMEI/Prod/CheckIMEI/index.php</string>
+    <string name="url_user_validation">https://champions.iodigitrack.com/CheckIMEI/Prod/UserValidationCheck/index.php</string>
+</resources>
