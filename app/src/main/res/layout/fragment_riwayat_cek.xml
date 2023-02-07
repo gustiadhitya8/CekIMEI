@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentRiwayatCek">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/SwipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_logo_check_imei" />
+
+            <ImageView
+                android:id="@+id/btnLogout"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_btn_logout" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginEnd="15dp"
+                android:text="RIWAYAT \n CEK IMEI MELALUI APLIKASI"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="150dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    app:cardCornerRadius="50dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/gray_light">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:hint="IMEI" />
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:alpha="0.3"
+                            android:src="@drawable/ic_baseline_search_24" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <RadioGroup
+                    android:id="@+id/radiogroupDateRange"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioHariIni"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_margin="2.5dp"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:background="@drawable/radio_custom_selected"
+                        android:button="@android:color/transparent"
+                        android:text="Hari Ini"
+                        android:autoSizeTextType="uniform"
+                        android:maxLines="1"
+                        android:textAlignment="center"
+                        android:textColor="@drawable/radio_custom_selected_text" />
+
+                    <RadioButton
+                        android:id="@+id/radioKemarin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_margin="2.5dp"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:background="@drawable/radio_custom_selected"
+                        android:button="@android:color/transparent"
+                        android:text="Kemarin"
+                        android:autoSizeTextType="uniform"
+                        android:maxLines="1"
+                        android:textAlignment="center"
+                        android:textColor="@drawable/radio_custom_selected_text" />
+
+                    <RadioButton
+                        android:id="@+id/radioMingguIni"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_margin="2.5dp"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:background="@drawable/radio_custom_selected"
+                        android:button="@android:color/transparent"
+                        android:text="Minggu Ini"
+                        android:textAlignment="center"
+                        android:textColor="@drawable/radio_custom_selected_text" />
+
+                    <RadioButton
+                        android:id="@+id/radioBulanIni"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_margin="2.5dp"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:background="@drawable/radio_custom_selected"
+                        android:button="@android:color/transparent"
+                        android:text="Bulan Ini"
+                        android:autoSizeTextType="uniform"
+                        android:maxLines="1"
+                        android:textAlignment="center"
+                        android:textColor="@drawable/radio_custom_selected_text" />
+                </RadioGroup>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"/>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</FrameLayout>

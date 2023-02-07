@@ -93,7 +93,7 @@ public class Login extends AppCompatActivity {
 
         String access_token = sharedPreferences.getString("access_token", "");
         if (!access_token.equals("")){
-            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            Intent intent = new Intent(getApplicationContext(), Home.class);
             startActivity(intent);
             finish();
         }
@@ -106,6 +106,7 @@ public class Login extends AppCompatActivity {
         listener = new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
+                progressDialog.cancel();
                 try {
                     JSONObject jsonResponse = new JSONObject(response);
                     boolean success = jsonResponse.getBoolean("success");
@@ -123,8 +124,14 @@ public class Login extends AppCompatActivity {
                             btnLogin.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
-                                    LoginToApps(editUsername.getText().toString(), editPIN.getText().toString(), editNewPIN.getText().toString());
-                                    progressDialog.show();
+                                    if(editNewPIN.getText().toString().equals("")){
+                                        Toast.makeText(Login.this, "PIN Baru Kosong. Mohon dapat mengubah PIN terlebih dahulu.", Toast.LENGTH_LONG).show();
+                                    }else if(editNewPIN.getText().length() < 6){
+                                        Toast.makeText(Login.this, "PIN Baru kurang dari 6 digit", Toast.LENGTH_LONG).show();
+                                    }else{
+                                        LoginToApps(editUsername.getText().toString(), editPIN.getText().toString(), editNewPIN.getText().toString());
+                                        progressDialog.show();
+                                    }
                                 }
                             });
                         }else{
@@ -133,8 +140,10 @@ public class Login extends AppCompatActivity {
                             String data_name = jsonResponse.getString("data_name");
                             String data_region = jsonResponse.getString("data_region");
                             String data_area = jsonResponse.getString("data_area");
+                            String data_sales_area = jsonResponse.getString("data_sales_area");
                             String data_cluster = jsonResponse.getString("data_cluster");
                             String data_micro_cluster = jsonResponse.getString("data_micro_cluster");
+                            String data_fitur_pencapaian = jsonResponse.getString("data_fitur_pencapaian");
 
                             String encrypt_username = jsonResponse.getString("encrypt_username");
                             String encrypt_password = jsonResponse.getString("encrypt_password");
@@ -154,8 +163,10 @@ public class Login extends AppCompatActivity {
                             editor.putString("data_name",data_name);
                             editor.putString("data_region",data_region);
                             editor.putString("data_area",data_area);
+                            editor.putString("data_sales_area",data_sales_area);
                             editor.putString("data_cluster",data_cluster);
                             editor.putString("data_micro_cluster",data_micro_cluster);
+                            editor.putString("data_fitur_pencapaian",data_fitur_pencapaian);
 
                             //Toast.makeText(getApplicationContext(), outlet_id, Toast.LENGTH_SHORT).show();
 
@@ -183,6 +194,7 @@ public class Login extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Toast.makeText(Login.this, ""+error, Toast.LENGTH_SHORT).show();
+                progressDialog.cancel();
             }
         };
         APILogin apiLogin = new APILogin(getApplicationContext(), username, password, new_password, listener, errorListener);
@@ -194,6 +206,7 @@ public class Login extends AppCompatActivity {
         listener = new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
+                progressDialog.cancel();
                 try {
                     JSONObject jsonResponse = new JSONObject(response);
                     String token_type = jsonResponse.getString("token_type");
@@ -208,7 +221,7 @@ public class Login extends AppCompatActivity {
                     editor.commit();
 
                     progressDialog.cancel();
-                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), Home.class);
                     startActivity(intent);
                     finish();
                 } catch (JSONException e) {
@@ -221,6 +234,7 @@ public class Login extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Toast.makeText(Login.this, ""+error, Toast.LENGTH_SHORT).show();
+                progressDialog.cancel();
             }
         };
 

@@ -16,5 +16,6 @@
     <color name="yellow_normal">#ffcb08</color>
     <color name="yellow_light">#fffe52</color>
     <color name="yellow_dark">#c79b00</color>
+    <color name="yellow_odd">#FFF9E3</color>
 
 </resources>

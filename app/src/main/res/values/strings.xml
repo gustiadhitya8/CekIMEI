@@ -3,7 +3,13 @@
     <string name="app_ver">1.0.1</string>
     <string name="url_api_check_imei">https://api-myretail.indosatooredoo.com/api/imei/check</string>
     <string name="url_token_myretail">https://api-myretail.indosatooredoo.com/oauth/token</string>
-    <string name="url_loginl">https://champions.iodigitrack.com/CheckIMEI/Prod/Login/</string>
-    <string name="url_check_imei_log">https://champions.iodigitrack.com/CheckIMEI/Prod/CheckIMEI/index.php</string>
-    <string name="url_user_validation">https://champions.iodigitrack.com/CheckIMEI/Prod/UserValidationCheck/index.php</string>
+    <string name="url_loginl">https://cekimei.iodigitrack.com/API/Prod/Login/index.php</string>
+    <string name="url_check_imei_log">https://cekimei.iodigitrack.com/API/Prod/CheckIMEI/index.php</string>
+    <string name="url_user_validation">https://cekimei.iodigitrack.com/API/Prod/UserValidationCheck/index.php</string>
+
+    <string name="url_riwayat_cek">https://cekimei.iodigitrack.com/API/Prod/HistoryCheck/index.php</string>
+    <string name="url_pencapaian">https://cekimei.iodigitrack.com/API/Prod/DSFAchievement/index.php</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

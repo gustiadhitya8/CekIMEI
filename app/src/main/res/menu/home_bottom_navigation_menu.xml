@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/cek_imei"
+        android:title="Cek IMEI"
+        android:icon="@drawable/icon_cek_imei"/>
+    <item
+        android:id="@+id/riwayat_cek_imei"
+        android:title="Riwayat Cek"
+        android:icon="@drawable/icon_riwayat_cek"/>
+    <item
+        android:id="@+id/pencapaian_qsc_imei"
+        android:title="Pencapaian"
+        android:icon="@drawable/icon_pencapaian"/>
+</menu>

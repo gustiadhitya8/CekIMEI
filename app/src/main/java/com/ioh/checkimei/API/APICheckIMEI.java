@@ -4,6 +4,7 @@ import static android.content.Context.MODE_PRIVATE;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.os.Build;
 
 import com.android.volley.Response;
 import com.android.volley.toolbox.StringRequest;
@@ -54,6 +55,11 @@ public class APICheckIMEI extends StringRequest {
         super(Method.POST, context.getResources().getString(R.string.url_check_imei_log), null, null);
         params_body = new HashMap<>();
         params_header = new HashMap<>();
+
+        String device = "Manf. : " + Build.MANUFACTURER + " | Model : " + Build.MODEL + " | OS : " + Build.VERSION.RELEASE;
+        String version = context.getResources().getString(R.string.app_ver);
+        params_body.put("device", device);
+        params_body.put("version", version);
 
         sharedPreferences = context.getSharedPreferences("UserData", MODE_PRIVATE);
         String data_username = sharedPreferences.getString("data_username", "");
