@@ -23,9 +23,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.Volley;
-import com.google.android.material.card.MaterialCardView;
 import com.ioh.checkimei.API.APIPencapaian;
-import com.ioh.checkimei.API.APIRiwayatCek;
 import com.ioh.checkimei.API.APIUserValidationCheck;
 
 import org.json.JSONException;
@@ -33,7 +31,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class FragmentPencapaian extends Fragment {
+public class FragmentDSFPortal extends Fragment {
 
     Context context;
     ArrayList<String> pencapianQSC, pencapaianNewIMEI;
@@ -77,7 +75,7 @@ public class FragmentPencapaian extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_pencapaian, container, false);
+        View v = inflater.inflate(R.layout.fragment_dsf_portal, container, false);
         context = getActivity();
 
         //SetUp ProgressDialog

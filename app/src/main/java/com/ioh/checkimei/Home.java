@@ -27,7 +27,7 @@ public class Home extends AppCompatActivity {
     //Call the Fragment
     FragmentCekImei fragmentCekImei = new FragmentCekImei();
     FragmentRiwayatCek fragmentRiwayatCek = new FragmentRiwayatCek();
-    FragmentPencapaian fragmentPencapaian = new FragmentPencapaian();
+    FragmentDSFPortal fragmentDSFPortal = new FragmentDSFPortal();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +65,7 @@ public class Home extends AppCompatActivity {
                         replaceContainer(myContainer, fragmentRiwayatCek);
                         return true;
                     case R.id.pencapaian_qsc_imei:
-                        replaceContainer(myContainer, fragmentPencapaian);
+                        replaceContainer(myContainer, fragmentDSFPortal);
                         return true;
                 }
                 return false;

@@ -20,6 +20,9 @@
         android:theme="@style/Theme.CheckIMEI"
         tools:targetApi="31">
         <activity
+            android:name=".Pencapaian"
+            android:exported="false" />
+        <activity
             android:name=".Home"
             android:exported="false">
             <meta-data
