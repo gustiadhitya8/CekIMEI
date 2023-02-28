@@ -76,6 +76,7 @@
                         android:orientation="horizontal"
                         android:gravity="center">
                         <EditText
+                            android:id="@+id/editIMEI"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -157,8 +158,10 @@
                 </RadioGroup>
 
                 <androidx.recyclerview.widget.RecyclerView
+                    android:layout_weight="1"
+                    android:id="@+id/recylerHistory"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_marginTop="10dp"/>
 
                 <LinearLayout

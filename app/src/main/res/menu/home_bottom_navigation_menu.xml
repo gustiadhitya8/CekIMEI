@@ -10,6 +10,6 @@
         android:icon="@drawable/icon_riwayat_cek"/>
     <item
         android:id="@+id/pencapaian_qsc_imei"
-        android:title="Pencapaian"
-        android:icon="@drawable/icon_pencapaian"/>
+        android:title="Info Site"
+        android:icon="@drawable/ic_site_info"/>
 </menu>

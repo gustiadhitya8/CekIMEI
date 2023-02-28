@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Cek IMEI</string>
-    <string name="app_ver">1.0.1</string>
+    <string name="app_ver">1.1</string>
     <string name="url_api_check_imei">https://api-myretail.indosatooredoo.com/api/imei/check</string>
     <string name="url_token_myretail">https://api-myretail.indosatooredoo.com/oauth/token</string>
     <string name="url_loginl">https://cekimei.iodigitrack.com/API/Prod/Login/index.php</string>
@@ -10,6 +10,10 @@
     <string name="url_riwayat_cek">https://cekimei.iodigitrack.com/API/Prod/HistoryCheck/index.php</string>
     <string name="url_pencapaian">https://cekimei.iodigitrack.com/API/Prod/DSFAchievement/index.php</string>
 
+    <string name="url_get_site_info">https://cekimei.iodigitrack.com/API/Prod/GetSiteInfo/index.php</string>
+    <string name="url_get_site_list_data">https://cekimei.iodigitrack.com/API/Prod/GetSiteListData/index.php</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_site_maps">SiteMaps</string>
 </resources>
