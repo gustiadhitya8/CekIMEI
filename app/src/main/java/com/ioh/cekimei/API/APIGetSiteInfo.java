@@ -29,7 +29,7 @@ public class APIGetSiteInfo extends StringRequest {
         sharedPreferences = context.getSharedPreferences("UserData", MODE_PRIVATE);
         String encrypt_username = sharedPreferences.getString("encrypt_username", "");
 
-        params.put("username", encrypt_username);
+        params.put("encrypt_username", encrypt_username);
         params.put("LAC", LAC);
         params.put("CI", CI);
         params.put("device", device);

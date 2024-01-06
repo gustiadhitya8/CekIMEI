@@ -5,6 +5,7 @@ import static android.content.Context.MODE_PRIVATE;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Build;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -29,7 +30,7 @@ public class APIGetSiteListData extends StringRequest {
         sharedPreferences = context.getSharedPreferences("UserData", MODE_PRIVATE);
         String encrypt_username = sharedPreferences.getString("encrypt_username", "");
 
-        params.put("username", encrypt_username);
+        params.put("encrypt_username", encrypt_username);
         params.put("dsf_username", dsf_username);
         params.put("device", device);
         params.put("version", version);
