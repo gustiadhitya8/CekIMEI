@@ -236,10 +236,19 @@
                     android:id="@+id/btnOpenSiteAttachGmaps"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
                     android:layout_marginTop="15dp"
                     android:layout_marginEnd="10dp"
+                    android:text="Buka Peta Site" />
+
+                <Button
+                    android:id="@+id/btnTaggingAgenMOBO"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:text="Buka Peta Site"/>
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="Tagging Agen MOBO" />
 
                 <LinearLayout
                     android:layout_width="match_parent"

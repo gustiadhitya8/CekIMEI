@@ -50,7 +50,7 @@ public class FragmentSiteInfo extends Fragment {
     SwipeRefreshLayout SwipeRefresh;
     TextView textLacCi, textSiteId, textSiteName,
             textMicroCluster, textCluster, textDSF1, textDSF2;
-    Button btnOpenSiteAttachGmaps;
+    Button btnOpenSiteAttachGmaps, btnTaggingAgenMOBO;
 
     //Listener for API
     RequestQueue requestQueue;
@@ -98,6 +98,7 @@ public class FragmentSiteInfo extends Fragment {
         textDSF1 = (TextView) v.findViewById(R.id.textDSF1);
         textDSF2 = (TextView) v.findViewById(R.id.textDSF2);
         btnOpenSiteAttachGmaps = (Button) v.findViewById(R.id.btnOpenSiteAttachGmaps);
+        btnTaggingAgenMOBO = (Button) v.findViewById(R.id.btnTaggingAgenMOBO);
 
         //Setup ArrayList
         pencapianQSC = new ArrayList<>();
@@ -140,6 +141,14 @@ public class FragmentSiteInfo extends Fragment {
             @Override
             public void onClick(View view) {
                 new Logout(context, editor, builder, getActivity());
+            }
+        });
+
+        btnTaggingAgenMOBO.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, TaggingAgen.class);
+                startActivity(intent);
             }
         });
 

@@ -78,7 +78,7 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData> {
     }
 
     public class HolderData extends RecyclerView.ViewHolder{
-        TextView textIMEI, textDatetime,textStatus;
+        TextView textIMEI, textDatetime, textStatus;
         TextView textModel, textMSISDN;
         ImageView imgArrow;
         LinearLayout LayoutDetail;
